@@ -1,0 +1,58 @@
+pipeline {
+   agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Code will Build here'
+            }
+        } 
+    
+        stage ('Test') {
+            steps {
+                echo 'code will Test here'
+            }
+        }
+
+        stage ('Sonar Scanning') {
+            steps {
+                echo 'Sonar Scanning will scan the code here'
+            }
+        }
+
+        stage('Publish to Artifactory') {
+            steps {
+                echo 'Publish to Artifactory'
+            }
+        }
+
+        stage ('Deploy to Dev') {
+            steps {
+                echo 'Deploy to Dev'
+            }
+        }
+
+        stage ('Deploy to Test') {
+            steps {
+                echo 'Deploy to Test'
+            }
+        }
+
+        stage ('Deploy to UAT') {
+            steps {
+                echo 'Deploy to UAT'
+            }
+        }
+        stage ('Deploy to Stage') {
+            steps {
+                echo 'Deploy to Stage'
+            }
+        }
+
+        stage ('Deploy to prod'){
+            steps{
+                echo 'Deploy to prod which is used by customers'
+            } 
+        }
+    }
+}
